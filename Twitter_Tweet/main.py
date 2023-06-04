@@ -1,8 +1,3 @@
-# import constant as const
-# import os
-# from selenium.webdriver.common.by import By
-# from selenium.webdriver.chrome.service import Service
-# from selenium import webdriver
 from time import sleep
 from news import News
 from github import Github
@@ -14,14 +9,16 @@ from datetime import datetime
 current_time = int(datetime.now().strftime("%H%M"))
 idx = 0
 
-# DRIVER_PATH = "/home/anshul/Desktop/100DaysofPython/pythonProject/chrome-driver/chromedriver"
+def reset_db(db):
+    db.create_table()
+    db.delete_all_tables()
+    # change the post_num your wish if its different from 1 and is_github to 0
+    db.insert_table()
 
 def db_connect():
     # Get DB connect and setup, fetch data :)
     db = Database()
-    # db.create_table()
-    # db.delete_all_tables()
-    # db.insert_table()
+    # reset_db(db)
     is_github = db.get_is_github()[0]
     post_num = db.get_post_num()[0]
     return (db, is_github, post_num)
