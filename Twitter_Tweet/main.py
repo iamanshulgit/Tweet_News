@@ -25,7 +25,7 @@ def db_connect():
 
 def get_content(db, is_github, post_num, newsapi_ele):
     global idx, current_time
-    if current_time == 21 and is_github == 0:
+    if current_time == 13 and is_github == 0:
         ## To get github post
         print("Get github Post")
         if post_num < 10:
