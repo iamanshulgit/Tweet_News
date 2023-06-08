@@ -1,0 +1,8 @@
+sqlite3
+bs4
+requests
+lxml
+requests_oauthlib
+os
+json
+
